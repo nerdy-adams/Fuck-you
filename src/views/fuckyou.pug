@@ -1,0 +1,63 @@
+extends ./template/layout.pug
+block title
+  title  Factura de pago
+block css
+  style.
+    * {
+      margin : 0; 
+      padding: 0;
+    }
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    img {
+      width: 100%;
+      height: 100%; 
+    }
+    #fuckmsg {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 50%;
+      background-color: #666;
+      box-shadow : 1px 3px 30px #aaa;
+      border-radius: 30px;
+    }
+    #fuckmsg p {
+      font-size: 1.5vw;
+      text-align: center;
+      color: #fff;
+    }
+    #fuckmsg p:nth-child(2) {
+      margin-top: 5%;
+      font-size: 2vw;
+    }
+    button {
+      width: 30%;
+      height: 10%;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      margin-top : 10%;
+    }
+block main
+  section#fuck
+    img(src="./public/img/fuckyou.jpg")
+    div#fuckmsg
+      p Gracias por tener una buena habitación. 
+      p Confirmar factura de pago
+      button Cheque
+  script.
+    let fuckyou = document.getElementById('fuck');
+    let fuck = document.getElementById('fuckmsg');
+    fuckyou.addEventListener('click', () => {
+      fuck.style.display = 'none';
+    });
